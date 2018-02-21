@@ -10,7 +10,10 @@ Container.prototype.render = function () {
 
   return div;
 }
-
+Container.prototype.remove = function(){
+	var m = document.getElementById(this.id);
+	m.remove();
+}
 function Menu(id, className, items) {
   Container.call(this);
   this.id = id;
