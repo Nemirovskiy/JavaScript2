@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.pokeList {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 900px;
+    margin: 0 auto;
+}
+.pokeList li:nth-of-type(odd){
+    background: #ddd;
+}
+.pokeList li:nth-of-type(even){
+    background: #eee;
+}
+.pokeList img {
+    width: 100%;
+}
+.pokeList li{
+    height: 120px;
+    width: 96px;
+    cursor: pointer;
+    position: relative;
+}
+.pokeList li:hover span {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    background: #000;
+    color: red;
+    width: 100%;
+}
+.pokeList li span {
+    display: none;
+}
+.pokeList li.loading {
+    display: block;
+    width: 100%;
+    background: transparent;
+}
