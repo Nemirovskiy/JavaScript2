@@ -69,7 +69,7 @@ function PokeItem() {
     }
 }
 
-function getPocemons() {
+function getPokemons() {
     // поставим флаг занято, что б одновременно не было несколько запросов
 	employed = true;
 	// выполнить только в первый раз
