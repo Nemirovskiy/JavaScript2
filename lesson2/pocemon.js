@@ -1,4 +1,5 @@
 // кол-во покемонов = целое от высота экрана / 120 px
+// выведем 9 колонок, кол-во строк - 2 высоты экрана
 var pokeCount = parseInt( window.innerHeight / 120 * 2) * 9;
 var pokePage = 0;
 var employed = false;
@@ -12,6 +13,7 @@ function info() {
 		if(this.children[i].className == 'info'){
             flag = true;
 		}
+		// если есть блок ошибок - убераем его
 		else if(this.children[i].className == 'infoErr'){
             this.children[i].remove();
 		}
@@ -58,6 +60,7 @@ function PokeItem() {
         pokeName.innerText = this.name;
         pokeName.style.lineHeight = '20px';
         var pokeImg = document.createElement('img');
+        pokeImg.alt = this.name;
         pokeImg.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + this.id + '.png';
         item.appendChild(pokeName);
         item.appendChild(pokeImg);
@@ -94,7 +97,11 @@ function getPocemons() {
 	xhr.open('GET',"https://pokeapi.co/api/v2/pokemon/" +
 		"?offset=" + (pokeCount * pokePage++) + "&limit=" + pokeCount);
 	xhr.timeout = 5000;
-	xhr.ontimeout = function(){err.innerText = 'Время вышло!'};
+	xhr.ontimeout = function(){
+	    err.innerText = 'Время вышло!';
+        // время запроса вышло - снимаем флаг занято
+        employed = false;
+	};
 	xhr.send();
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState === XMLHttpRequest.DONE){
@@ -119,6 +126,7 @@ function getPocemons() {
 }
 
 window.onscroll = function () {
+    // подгузим ещё 2 экрана пока просматривается предпоследний экран
 	if (window.scrollY >= document.body.offsetHeight - window.innerHeight + 120 - (parseInt(pokeCount / 9)*120)){
         if(!employed) getPocemons();
 	}
