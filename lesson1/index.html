@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width">
+    <script src="menu.js"></script>
+    <script>
+      window.onload = function() {
+        var menuItem1 = new MenuItem('/', 'Главная');
+        var menuItem2 = new MenuItem('/about', 'О нас');
+        var menuItem3 = new MenuItem('/catalog', 'Каталог');
+        var menu = new Menu('menu', 'menu', [
+          menuItem1, menuItem2, menuItem3
+        ]);
+        document.body.appendChild(menu.render());  
+       
+        var btn = document.getElementById('btn');
+        btn.addEventListener("click",function(){menu.remove()})
+      }
+    </script>
+  </head>
+  <body>
+  <button id="btn">
+  remove menu
+  </button>
+  </body>
+</html>
