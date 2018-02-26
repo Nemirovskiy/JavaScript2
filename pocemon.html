@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="pocemon.js"></script>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.pokeList {
+			display: flex;
+			flex-wrap: wrap;
+			text-align: center;
+			width: 900px;
+			margin: 0 auto;
+		}
+		.pokeList li:nth-of-type(odd){
+			background: #ddd;
+		}
+		.pokeList li:nth-of-type(even){
+			background: #eee;
+		}
+		.pokeList img {
+			width: 100%;
+		}
+		.pokeList li{
+			height: 120px;
+			width: 96px;
+			cursor: pointer;
+			position: relative;
+		}
+		.pokeList li:hover span {
+			display: block;
+			position: absolute;
+			top: 0;
+			z-index: 9;
+			background: #000;
+			color: red;
+			width: 100%;
+		}
+		span {
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+<script>
+    document.onload = getPocemons();
+</script>
+</body>
+</html>
