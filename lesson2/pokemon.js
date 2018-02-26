@@ -128,6 +128,6 @@ function getPokemons() {
 window.onscroll = function () {
     // подгузим ещё 2 экрана пока просматривается предпоследний экран
 	if (window.scrollY >= document.body.offsetHeight - window.innerHeight + 120 - (parseInt(pokeCount / 9)*120)){
-        if(!employed) getPocemons();
+        if(!employed) getPokemons();
 	}
 }
