@@ -10,7 +10,7 @@ output1.innerText += str.replace(/(.)?'(.)?/g,"$1\"$2");
 var button = document.getElementById('button');
 
 button.addEventListener('click',validate);
-function validate() {
+function validate(event) {
 	var inpName = document.getElementById('name');
 	var inpPhone = document.getElementById('phone');
 	var inpMail = document.getElementById('mail');
@@ -21,22 +21,24 @@ function validate() {
 
 	if(!/[а-яА-ЯёЁ\w]{2,20}/.test(inpName.value)){
 		inpName.className = "error";
-		err.innerText += "Не заполнено Имя!\n";
+		err.innerText += "В поле имя должны быть буквы!\n";
 	}
 	else inpName.className = "";
 	if(!/\+7\(\d{3}\)\d{3}-\d{4}/.test(inpPhone.value)){
 		inpPhone.className = "error";
-		err.innerText += "Не заполнено Телефон!\n";
+		err.innerText += "Телефон не в формате +7(900)111-2222!\n";
 	}
 	else inpPhone.className = "";
 	if(!/[\w\d\.-]{2,20}@[\w]+\.(ru|com|net)/.test(inpMail.value)){
 		inpMail.className = "error";
-		err.innerText += "Не заполнено Почта!\n";
+		err.innerText += "Не правильно указана почта!\n";
 	}
 	else inpMail.className = "";
 	if(!/[а-яА-ЯёЁ\w]{2,}/.test(inpText.value)){
 		inpText.className = "error";
-		err.innerText += "Не заполнено Текст!\n";
+		err.innerText += "Не заполнен текст!\n";
 	}
 	else inpText.className = "";
+
+	if(err.innerText != "") event.preventDefault();
 }
