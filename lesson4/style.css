@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+.control {
+    display: flex;
+    list-style: none;
+}
+.control li {
+    margin-right: 5px;
+    padding: 10px;
+    background: #ccc;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    bottom: -2px;
+    border: #ccc 2px solid;
+    cursor: pointer;
+}
+.control li.active {
+    background: #fff;
+    border-bottom: 0;
+}
+.text {
+    border: #ccc solid 2px;
+    list-style: none;
+    width: 700px;
+    padding: 10px;
+}
+.text li{
+    display: none;
+}
+.text li.active{
+    display: block;
+}
