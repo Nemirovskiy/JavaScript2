@@ -1,6 +1,6 @@
 // установки
 var control = '#control';   // контролируемый список вкладок
-var text = '#text';         // список с описанием
+var text = '#detail';         // список с описанием
 var number = 3;             // активная вкадка при загрузке страницы
 
 $(document).ready(function () {

@@ -10,7 +10,7 @@ $(document).ready(function(){
      $('#city').val($(this).text());
      $('#citylist').empty();
      var text = 'Выбран город '+ $(this).text() ;
-     text += ($(this).attr('title') === undefined)?'':' ('+ $(this).attr('title')+')';
+     text += ($(this).attr('title').length > 0)? ' ('+ $(this).attr('title')+')' : '';
      $('#result').text(text);
   });
     }

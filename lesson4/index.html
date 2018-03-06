@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="tabs.js"></script>
     <script src="city.js"></script>
+    <script src="form.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +20,7 @@
         <li>PHP</li>
         <li>Angular</li>
     </ul>
-    <ul id="text" class="text">
+    <ul id="detail" class="text">
         <li>
             Стандартизированный язык разметки документов во Всемирной
             паутине. Большинство веб-страниц содержат описание разметки
@@ -47,12 +48,21 @@
         </li>
     </ul>
     <h3>Задание 2-3</h3>
-    <span class="form">
-        <input type="text" id="city" placeholder="Выберите город" list="citylist">
-        <ul id="citylist"></ul>
-    </span>
-    <br>
-    <span id="result"></span>
+
+
+    <form class="unit3">
+        <span id="error" class="errorText"></span>
+        <input type="text" id="name" placeholder="Имя">
+        <input type="text" id="phone" placeholder="+7(900)111-2222">
+        <input type="text" id="mail" placeholder="name@mail.ru">
+        <span class="form">
+            <input type="text" id="city" placeholder="Выберите город" list="citylist">
+            <ul id="citylist"></ul>
+        </span>
+        <span id="result"></span>
+        <textarea name="" id="text" cols="30" rows="10" placeholder="Текст"></textarea>
+        <button id="button" >Отправить</button>
+    </form>
 </div>
 
 </body>

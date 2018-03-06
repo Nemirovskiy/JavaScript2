@@ -54,3 +54,22 @@
 h3 {
     margin-top: 20px;
 }
+
+.errorText{
+    color: red;
+}
+.error{
+    border: 1px solid red;
+}
+.unit3 {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+}
+.unit3 * {
+    margin-top: 5px;
+}
+textarea {
+    overflow: hidden;
+    resize: none;
+}
