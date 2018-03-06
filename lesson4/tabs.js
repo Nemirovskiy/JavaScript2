@@ -8,7 +8,8 @@ $(document).ready(function () {
     number = (number >= $(control).children().length) ? 1 : number-1;
     // находим указанную вкладку и устанавливаем активность
     $($(control).children()[number]).addClass('active');
-    $($(text).children()[number]).addClass('active');
+    //$(text).children().hide();
+    $($(text).children()[number]).show();
 
     // вешаем на событие нажатия - функцию
     $(control).on('click','li',function () {
@@ -31,15 +32,17 @@ $(document).ready(function () {
                 // нажатой вкадке и такому же по счету элементу из описания
                 if(this === element) {
                     $(this).addClass('active');
-                    $(arr[i]).addClass('active');
+                    //$(arr[i]).addClass('active');
+                    $(arr[i]).show();
                 }
                 // иначе - снимем у остальных класс активности
                 else {
                     $(this).removeClass('active');
-                    $(arr[i]).removeClass('active');
+                    //$(arr[i]).removeClass('active');
+                    $(arr[i]).hide();
                 }
                 i++; // увеличим счетчик
             }
         )
     })
-})
+});

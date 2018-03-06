@@ -23,6 +23,7 @@
 .control li.active {
     background: #fff;
     border-bottom: 0;
+    cursor: text;
 }
 .text {
     border: #ccc solid 2px;
@@ -34,5 +35,22 @@
     display: none;
 }
 .text li.active{
-    display: block;
+    /*display: block;*/
+}
+
+.form{
+    position: relative;
+    width: 150px;
+    display: inline-block;
+}
+.form ul{
+    position: absolute;
+    list-style: none;
+    background: #fff;
+    padding: 0 5px;
+    width: 100%;
+    cursor: default;
+}
+h3 {
+    margin-top: 20px;
 }
