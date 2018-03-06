@@ -3,7 +3,7 @@
     margin: 0;
 }
 .container {
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
 }
 .control {
@@ -28,7 +28,7 @@
 .text {
     border: #ccc solid 2px;
     list-style: none;
-    width: 700px;
+    max-width: 700px;
     padding: 10px;
 }
 .text li{
