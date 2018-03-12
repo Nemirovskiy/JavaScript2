@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.goods {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.goods div {
+    flex: 1 180px;
+    text-align: center;
+}
