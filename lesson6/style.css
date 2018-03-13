@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.block{
+    width: 50px;
+    height: 50px;
+    background: orangered;
+}
+.area{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: greenyellow;
+}
+
+.form{
+    position: relative;
+    display: inline-block;
+}
+input, textarea, .form {
+    width: 100%;
+}
+.form ul{
+    position: absolute;
+    list-style: none;
+    background: #fff;
+    width: 100%;
+    cursor: default;
+    border: 1px solid #eee;
+    margin: 0;
+}
+.form li{
+    padding: 0 5px;
+}
+.form li:hover {
+    color: #fff;
+    background: #00f;
+}
+h3 {
+    margin-top: 20px;
+}
+.error{
+    border: 1px solid red;
+}
+.feedback  {
+    display: flex;
+    flex-direction: column;
+
+}
+.ui-datepicker, .feedback {
+    width: 260px;
+}
+.feedback * {
+    margin-top: 5px;
+}
+textarea {
+    overflow: hidden;
+    resize: none;
+}

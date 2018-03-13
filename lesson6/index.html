@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>lesson 6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="form.js"></script>
+    <script src="city.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <form class="feedback">
+        <span id="error" class="errorText"></span>
+        <input type="text" id="name" placeholder="Имя">
+        <input type="text" id="phone" placeholder="+7(900)111-2222">
+        <input type="text" id="mail" placeholder="name@mail.ru">
+        <input type="text" id="brdate" placeholder="дата рождения">
+        <span class="form">
+            <input type="text" id="city" placeholder="Выберите город" list="citylist">
+            <ul id="citylist"></ul>
+        </span>
+        <span id="result"></span>
+        <textarea name="" id="text" cols="30" rows="10" placeholder="Текст"></textarea>
+        <button id="button" >Отправить</button>
+    </form>
+</div>
+<script>
+    $("#brdate").datepicker({
+        dayNames: ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],
+        monthNames: ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
+        dayNamesMin: ["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],
+        dateFormat: "dd.mm.yy",
+        firsDay: 1
+    });
+</script>
+</body>
+</html>
