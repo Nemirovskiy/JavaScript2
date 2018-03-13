@@ -63,3 +63,17 @@ textarea {
     overflow: hidden;
     resize: none;
 }
+
+.cart {
+    width: 170px;
+    background: palegreen;
+    float: right;
+}
+.item {
+    background: lightsalmon;
+    width: 190px;
+    margin: 10px;
+}
+li {
+    margin-left: 20px;
+}

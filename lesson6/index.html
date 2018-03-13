@@ -10,10 +10,16 @@
     <link rel="stylesheet" href="style.css">
     <script src="form.js"></script>
     <script src="city.js"></script>
+    <script src="main.js"></script>
 
 </head>
 <body>
 <div class="container">
+    <div class="cart">
+        <h2>Корзина</h2>
+        <ul id="cart"></ul>
+        <span id="price"></span>
+    </div>
     <form class="feedback">
         <span id="error" class="errorText"></span>
         <input type="text" id="name" placeholder="Имя">
@@ -28,15 +34,34 @@
         <textarea name="" id="text" cols="30" rows="10" placeholder="Текст"></textarea>
         <button id="button" >Отправить</button>
     </form>
+
+    <div id="goods" class="goods">
+        <div class="item" data-price="1200" data-name="Погремушка">
+            <h2>Погремушка</h2>
+            <b>1200</b>
+            <p>Переместите в корзину</p>
+        </div>
+        <div class="item" data-price="1500" data-name="Гусли">
+            <h2>Гусли</h2>
+            <b>1500</b>
+            <p>Переместите в корзину</p>
+        </div>
+        <div class="item" data-price="1700" data-name="Баян">
+            <h2>Баян</h2>
+            <b>1700</b>
+            <p>Переместите в корзину</p>
+        </div>
+        <div class="item" data-price="1500" data-name="Трещетка">
+            <h2>Трещетка</h2>
+            <b>1500</b>
+            <p>Переместите в корзину</p>
+        </div>
+        <div class="item" data-price="1100" data-name="Ложки">
+            <h2>Ложки</h2>
+            <b>1100</b>
+            <p>Переместите в корзину</p>
+        </div>
+    </div>
 </div>
-<script>
-    $("#brdate").datepicker({
-        dayNames: ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],
-        monthNames: ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
-        dayNamesMin: ["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],
-        dateFormat: "dd.mm.yy",
-        firsDay: 1
-    });
-</script>
 </body>
 </html>
